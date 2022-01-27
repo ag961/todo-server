@@ -1,0 +1,10 @@
+'use strict'
+
+require('dotenv').config();
+const server = require('./src/server')
+
+server.start(3001)
+
+
+
+
