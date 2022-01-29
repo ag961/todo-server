@@ -1,4 +1,26 @@
 {
+  "name": "todo-server",
+  "description": "A back-end server for todo app, that provides basic and bearer auth for users, as well as manages to-do items in Pastgres SQL database.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "init": "sequelize db:create",
+    "start": "NODE_ENV=production node index.js",
+    "dev": "NODE_ENV=development node index.js",
+    "init:config": "sequelize init:config",
+    "db:create": "sequelize db:create",
+    "watch": "nodemon index.js",
+    "test-watch": "NODE_ENV=test jest --watchAll --verbose --coverage",
+    "test": "NODE_ENV=test jest --verbose --coverage",
+    "lint": "eslint **/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ag961/todo-server.git"
+  },
+  "keywords": [],
+  "author": "Ayrat Gimranov",
+  "license": "ISC",
   "dependencies": {
     "base-64": "^1.0.0",
     "bcrypt": "^5.0.1",
@@ -11,20 +33,6 @@
     "sequelize": "^6.14.1",
     "sequelize-cli": "^6.4.1"
   },
-  "name": "todo-server",
-  "description": "A back-end server for todo app, that provides basic and bearer auth for users, as well as manages to-do items in Pastgres SQL database.",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ag961/todo-server.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "bugs": {
     "url": "https://github.com/ag961/todo-server/issues"
   },
